@@ -1,0 +1,25 @@
+{
+  "aggregate": {
+    "faithfulness": 0.875,
+    "answer_relevancy": 0.912,
+    "context_precision": 0.840,
+    "context_recall": 0.895
+  },
+  "num_questions": 15,
+  "failures": [
+    {
+      "question": "Quy định về thời gian nghỉ thai sản cho nam giới là bao nhiêu?",
+      "worst_metric": "context_recall",
+      "score": 0.45,
+      "diagnosis": "Missing relevant chunks",
+      "suggested_fix": "Improve chunking or add BM25"
+    },
+    {
+      "question": "Ai là người phê duyệt ngân sách phòng ban?",
+      "worst_metric": "faithfulness",
+      "score": 0.52,
+      "diagnosis": "LLM hallucinating",
+      "suggested_fix": "Tighten prompt, lower temperature"
+    }
+  ]
+}
